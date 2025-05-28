@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fab.com Filter</h1>
+
+      <div class="section">
+        <h2>Add Username</h2>
+        <div class="input-group">
+          <input
+            type="text"
+            id="usernameInput"
+            placeholder="Enter username to filter"
+            maxlength="100"
+            pattern="[a-zA-Z0-9_\-\.]+"
+            title="Only letters, numbers, underscores, hyphens, and dots allowed"
+          />
+          <button id="addButton" type="button">Add</button>
+        </div>
+        <div id="inputError" class="input-error"></div>
+      </div>
+
+      <div class="section">
+        <h2>Filtered Usernames (<span id="usernameCount">0</span>)</h2>
+        <div id="usernameList" class="username-list"></div>
+        <div id="emptyMessage" class="empty-message">
+          No usernames filtered yet
+        </div>
+      </div>
+
+      <div class="section actions">
+        <button id="clearButton" class="secondary" type="button">
+          Clear All
+        </button>
+        <button id="exportButton" class="secondary" type="button">
+          Export
+        </button>
+        <button id="importButton" class="secondary" type="button">
+          Import
+        </button>
+        <input
+          type="file"
+          id="fileInput"
+          accept=".json"
+          style="display: none"
+        />
+      </div>
+
+      <div class="section settings">
+        <label class="checkbox-label">
+          <input type="checkbox" id="showCountCheckbox" />
+          <span>Show blocked items count</span>
+        </label>
+      </div>
+
+      <div id="status" class="status" role="alert"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
