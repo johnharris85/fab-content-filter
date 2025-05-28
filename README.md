@@ -15,7 +15,7 @@ A Chrome extension that filters content on fab.com by hiding items from specific
 
 ### From the Chrome Extension Store 
 
-**_Coming Soon_**
+**_Coming Soon_** (submitted for review)
 
 ### From this Repository
 
