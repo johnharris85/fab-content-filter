@@ -1,10 +1,11 @@
 # Fab.com Content Filter
 
-A Chrome extension that filters content on fab.com by hiding items from specific sellers/creators.
+A Chrome extension that filters content on fab.com by hiding items from specific sellers/creators. Also allows hiding items that are already in your library / owned.
 
 ## Features
 
 - 🚫 Hide products from specific usernames
+- 📚 Hide items already in "My Library"
 - 📊 Optional badge showing number of filtered items
 - 💾 Syncs across devices via Chrome sync
 - 📤 Import/export filter lists as JSON
@@ -15,7 +16,7 @@ A Chrome extension that filters content on fab.com by hiding items from specific
 
 ### From the Chrome Extension Store 
 
-**_Coming Soon_** (submitted for review)
+[Fab.com Content Filter](https://chromewebstore.google.com/detail/fabcom-seller-username-fi/pjgcfbmdffhjdihbonmmckgihbakhdcp)
 
 ### From this Repository
 
@@ -36,12 +37,16 @@ A Chrome extension that filters content on fab.com by hiding items from specific
 
 **Settings:**
 - Toggle badge counter on/off
+- Hide items already saved in "My Library"
 
 ## JSON Format
 
 ```json
 {
-  "usernames": ["seller1", "seller2", "seller3"]
+  "usernames": ["seller1", "seller2", "seller3"],
+  "settings": {
+    "hideLibrary": true
+  }
 }
 ```
 

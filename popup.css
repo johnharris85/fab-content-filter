@@ -157,6 +157,11 @@ button.secondary:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 4px 0;
+}
+
+.checkbox-label:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .checkbox-label input[type="checkbox"] {
